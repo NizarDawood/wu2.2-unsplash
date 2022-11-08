@@ -1,11 +1,15 @@
 {
   "name": "unsplash",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a test of 11ty and data files.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "eleventy --serve"
+    "watch:sass": "sass  --no-source-map --watch src/sass:dist/css",
+    "watch:eleventy": "eleventy --serve",
+    "build:sass": "sass  --no-source-map src/sass:dist/css",
+    "build:eleventy": "eleventy",
+    "start": "npm-run-all build:sass --parallel watch:*",
+    "build": "npm-run-all build:sass build:eleventy"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +19,17 @@
     "@11ty/eleventy-fetch": "^3.0.0",
     "@11ty/eleventy-img": "^2.0.1",
     "dotenv": "^16.0.3"
-  }
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.56.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NizarDawood/wu2.2-unsplash.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NizarDawood/wu2.2-unsplash/issues"
+  },
+  "homepage": "https://github.com/NizarDawood/wu2.2-unsplash#readme"
 }

@@ -13,4 +13,5 @@ module.exports = async function() {
         duration: "1d", // save for 1 day
         type: "json"    // we’ll parse JSON for you
     });
+    
 };
