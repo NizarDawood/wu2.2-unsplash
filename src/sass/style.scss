@@ -1,4 +1,26 @@
 body {
 
-    background-color: aquamarine;
+    background-color: rgb(21, 31, 28);
 }
+ img {
+    display: block;
+    width: 300px;
+    object-fit: cover;
+    
+  }
+  .nav {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+  } 
+
+  .gallery {
+    display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 200px;
+  justify-items: center;
+  grid-template-areas: "card";
+
+
+  }
